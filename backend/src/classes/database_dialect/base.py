@@ -19,5 +19,5 @@ class DatabaseDialect(ABC):
         pass
     
     @abstractmethod
-    def connect(self, connection_string: str) -> List[DataBase]:
+    def connect(self, connection_string: str, list_all_databases: bool = False) -> List[DataBase]:
         pass

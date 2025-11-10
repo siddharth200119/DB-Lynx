@@ -1,6 +1,5 @@
-
 """
-create database_servers table
+Recreate database_servers table to use a connection string
 """
 
 from yoyo import step
@@ -12,12 +11,9 @@ steps = [
         """
         CREATE TABLE database_servers (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            connection_string TEXT NOT NULL,
             dialect TEXT NOT NULL,
-            username TEXT NOT NULL,
-            password TEXT NOT NULL,
-            host TEXT NOT NULL,
-            port INTEGER NOT NULL,
-            default_database TEXT NOT NULL,
             show_all_databases BOOLEAN NOT NULL DEFAULT 0
         );
         """,
