@@ -1,0 +1,7 @@
+{
+  "dialect": "sqlite",
+  "use_env": true,
+  "env_mapping": {
+    "DB_PATH": "DB_PATH"
+  }
+}
